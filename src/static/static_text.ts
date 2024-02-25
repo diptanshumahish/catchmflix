@@ -34,5 +34,14 @@ export const static_text = {
         useLoginInfo:
             "use your login credentials to login back to your account. If any issues feel free to contact",
         ad2: " Novice Filmmakers Shine! Unleash Your Creativity, Ignite Your Passion. Your Journey to Movie Magic Starts Here! We are hosting a movies/ web series competetion, if you are interested then feel free to contact us",
+        aboutus1:
+            "CatchMFlix, a proud venture of CatchMFlix Pvt. Ltd., is more than just a streaming service – it's a celebration of regional creativity and storytelling. Our platform is dedicated to showcasing the remarkable work of local artists, bringing you a diverse collection of movies and web series that resonate with the essence of your community.",
+        local_talent:
+            "At CatchMFlix, we take pride in curating a selection that reflects the brilliance of regional artists. From gripping movies to captivating web series, each piece of content is a testament to the creativity and skill within our community.",
+        native_language:
+            "Immerse yourself in the authenticity of storytelling as we deliver every narrative in your native language. CatchMFlix is your gateway to a world where local stories take center stage, creating a unique viewing experience that resonates with your cultural roots.",
+        stream_anywhere: "📱 Stream Your Way, Anywhere, Anytime",
+        stream_text:
+            "Enjoy the freedom of entertainment on your terms. Stream CatchMFlix seamlessly across various devices – be it your mobile phones, tablets, desktops, smart TVs, or other streaming gadgets. Your cinematic experience is at your fingertips, ready to enhance your moments, wherever you may be.",
     },
 };

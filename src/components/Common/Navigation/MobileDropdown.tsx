@@ -19,7 +19,7 @@ import LanguagesDrawer from "./LanguagesDrawer";
 export default function MobileDropdown() {
     return (
         <Drawer>
-            <DrawerTrigger className="flex items-center gap-1">
+            <DrawerTrigger className="flex items-center lg:hidden">
                 <Menu color="white" />
             </DrawerTrigger>
             <DrawerContent>

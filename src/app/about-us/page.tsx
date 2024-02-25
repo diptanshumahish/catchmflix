@@ -1,4 +1,5 @@
 import ImageGradientHeader from "@/components/Common/Header/ImageGradientHeader";
+import AboutUsSection1 from "@/components/Landing/AboutUs/AboutUsSection1";
 import { static_images } from "@/static/static_images";
 import { static_text } from "@/static/static_text";
 import React from "react";
@@ -17,7 +18,7 @@ export default function page() {
                     {static_text.en.aboutUsDetails}
                 </span>
             </div>
-            <div className="pt-[50vh]"></div>
+            <AboutUsSection1 />
         </div>
     );
 }

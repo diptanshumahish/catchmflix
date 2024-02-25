@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { static_text } from "@/static/static_text";
 export default function PricingDiv() {
     return (
-        <div className="py-[5%]  z-10">
+        <div className="py-[5%] z-10">
             <Tabs
                 defaultValue="Premium"
                 className="lg:w-[600px] z-10 w-[300px]"
