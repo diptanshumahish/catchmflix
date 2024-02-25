@@ -6,9 +6,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { static_text } from "@/static/static_text";
 export default function PricingDiv() {
     return (
-        <div className="py-[5%]">
-            <Tabs defaultValue="Premium" className="w-[600px]">
-                <TabsList className="grid w-full grid-cols-3">
+        <div className="py-[5%]  z-10">
+            <Tabs
+                defaultValue="Premium"
+                className="lg:w-[600px] z-10 w-[300px]"
+            >
+                <TabsList className="grid w-full grid-cols-3 z-10">
                     <TabsTrigger value="Premium">Premium</TabsTrigger>
                     <TabsTrigger value="Prime">Prime</TabsTrigger>
                     <TabsTrigger value="Family">Family</TabsTrigger>

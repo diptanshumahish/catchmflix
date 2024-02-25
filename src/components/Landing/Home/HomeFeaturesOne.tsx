@@ -29,14 +29,14 @@ export default function HomeFeaturesOne() {
                 className="h-[60vh] w-full object-cover rounded-md border border-secondary-text border-opacity-40 z-10"
             />
             <div className="border-l-4 flex flex-col gap-4 border-primary-cyan pl-6">
-                <h3 className="text-4xl  text-white">
+                <h3 className="lg:text-4xl text-2xl  text-white">
                     <span className="text-primary-cyan font-bold">
                         No hidden charges, No commitments
                     </span>
                     , all CatchMflix users can get our premium plans for free
                     right now!
                 </h3>
-                <span className="text-secondary-text">
+                <span className="text-secondary-text lg:text-md text-sm">
                     {static_text.en.noCatch}
                 </span>
             </div>

@@ -18,8 +18,8 @@ export default function ComingSoon() {
                     we are very close to our launch date, stay tuned!
                 </span>
             </div>
-            <div className="w-full p-8 bg-secondary-violet border border-white border-opacity-40 rounded-md flex justify-between items-center">
-                <div className="w-[50%]">
+            <div className="w-full lg:p-8 p-4 bg-secondary-violet border border-white border-opacity-40 rounded-md flex justify-between lg:flex-row flex-col items-center lg:gap-0 gap-6">
+                <div className="lg:w-[50%]">
                     <Image
                         src={static_images.dummyBackgrounds[3]}
                         height={600}
@@ -28,13 +28,13 @@ export default function ComingSoon() {
                         className="w-full h-full object-cover rounded-md"
                     />
                 </div>
-                <div className="w-[40%] flex flex-col gap-8">
+                <div className="lg:w-[40%] flex flex-col lg:gap-8 gap-4">
                     <Image
                         src={static_images.logo}
                         alt="logo"
                         height={180}
                         width={180}
-                        className="animate-pulse"
+                        className="animate-pulse lg:size-[180px] size-[80px]"
                     />
                     <div className="text-5xl flex flex-col gap-2 font-semibold text-primary-cyan">
                         <h2>{static_text.en.excited}</h2>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PingScroller() {
     return (
-        <div className="flex flex-col justify-center animate-pulse gap-2 items-center pt-[5%]">
+        <div className="flex flex-col justify-center animate-pulse gap-2 items-center py-[5%]">
             <Image
                 src={static_images.circleSymbol}
                 height={60}

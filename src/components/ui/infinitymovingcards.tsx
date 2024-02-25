@@ -93,7 +93,7 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((ele, idx) => (
                     <Image
-                        className="aspect-video object-cover rounded-md"
+                        className="aspect-video object-cover rounded-md lg:w-[600px] h-auto w-[300px]"
                         key={idx}
                         src={ele}
                         height={300}

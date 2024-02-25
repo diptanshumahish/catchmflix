@@ -1,6 +1,7 @@
 import ImageGradientHeader from "@/components/Common/Header/ImageGradientHeader";
 import BottomCards from "@/components/Landing/Home/BottomCards";
 import ComingSoon from "@/components/Landing/Home/ComingSoon";
+import ForMovieMakers from "@/components/Landing/Home/ForMovieMakers";
 import HomeFeaturesOne from "@/components/Landing/Home/HomeFeaturesOne";
 import HomeFeaturesTwo from "@/components/Landing/Home/HomeFeaturesTwo";
 import PingScroller from "@/components/Landing/Home/PingScroller";
@@ -16,10 +17,10 @@ export default function Home() {
                 />
             </div>
             <div className="flex flex-col gap-8 items-center  pt-[40vh] justify-center w-full">
-                <div className="z-10 text-sm text-white bg-secondary-text px-4 py-1 rounded-full bg-opacity-20 border border-white border-opacity-20">
+                <div className="z-10 lg:text-sm text-xs text-white bg-secondary-text px-4 py-1 rounded-full bg-opacity-20 border border-white border-opacity-20">
                     {static_text.en.landingTop}
                 </div>
-                <h2 className="z-10 text-5xl font-medium text-white max-w-[30%] text-center">
+                <h2 className="z-10 lg:text-5xl md:text-4xl text-3xl font-medium text-white lg:max-w-[30%]  text-center">
                     {static_text.en.landing_header1}{" "}
                     <span className="font-semibold text-primary-cyan">
                         {static_text.en.landing_header2}
@@ -31,6 +32,7 @@ export default function Home() {
                 </h2>
             </div>
             <PingScroller />
+            <ForMovieMakers />
             <HomeFeaturesOne />
             <HomeFeaturesTwo />
             <ComingSoon />

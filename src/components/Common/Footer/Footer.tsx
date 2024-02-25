@@ -5,7 +5,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-secondary-violet flex justify-between items-center py-[5%] px-[8%]">
+        <footer className="bg-secondary-violet flex lg:flex-row flex-col lg:gap-0 gap-4 justify-between lg:items-center py-[5%] px-[8%]">
             <div className="flex flex-col gap-3">
                 <LogoImage size={80} />
                 <div>
@@ -17,7 +17,7 @@ export default function Footer() {
                     </span>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-center text-white">
+            <div className="flex flex-col lg:items-center lg:justify-center text-white">
                 <span className="text-sm text-secondary-text">Quick Links</span>
                 <Link href="/">Privacy Policy</Link>
                 <Link href="/">Terms & conditions</Link>

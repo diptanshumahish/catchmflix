@@ -6,8 +6,8 @@ import React from "react";
 
 export default function Login() {
     return (
-        <div className="flex items-center justify-between">
-            <div className="flex flex-col  gap-1 max-w-[45%]">
+        <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between">
+            <div className="flex flex-col  gap-1 lg:max-w-[45%]">
                 <LogoImage size={180} />
                 <h3 className="text-4xl font-bold text-primary-cyan">Login</h3>
                 <span className="text-secondary-text">
@@ -20,7 +20,7 @@ export default function Login() {
                     </a>
                 </span>
             </div>
-            <div className="w-[50%]">
+            <div className="lg:w-[50%] w-full">
                 <form action="" className="flex flex-col gap-2">
                     <div className="text-sm text-secondary-text">
                         Please fill up the fields properly

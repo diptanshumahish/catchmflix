@@ -13,10 +13,10 @@ export default function page() {
                 />
             </div>
             <div className="flex flex-col  items-center  pt-[40vh] justify-center w-full">
-                <h2 className="z-10 text-5xl font-medium text-white max-w-[30%] text-center">
+                <h2 className="z-10 lg:text-5xl text-3xl font-medium text-white lg:max-w-[30%] text-center">
                     {static_text.en.watchStuff}
                 </h2>
-                <span className="z-10 text-5xl font-bold text-primary-cyan">
+                <span className="z-10 lg:text-5xl text-3xl font-bold text-primary-cyan">
                     @{static_text.en.catchmflix}
                 </span>
                 <div className="text-secondary-text text-center z-10 lg:max-w-[40%] py-6 text-sm">

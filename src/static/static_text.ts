@@ -33,5 +33,6 @@ export const static_text = {
         onboard3: " create a new account below",
         useLoginInfo:
             "use your login credentials to login back to your account. If any issues feel free to contact",
+        ad2: " Novice Filmmakers Shine! Unleash Your Creativity, Ignite Your Passion. Your Journey to Movie Magic Starts Here! We are hosting a movies/ web series competetion, if you are interested then feel free to contact us",
     },
 };

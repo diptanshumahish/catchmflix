@@ -29,13 +29,13 @@ export default function HomeFeaturesTwo() {
                 className="h-[60vh] w-full object-cover rounded-md border border-secondary-text z-10 border-opacity-40 "
             />
             <div className="border-l-4 flex flex-col gap-4 border-primary-cyan pl-6">
-                <h3 className="text-4xl  text-white">
+                <h3 className="lg:text-4xl text-2xl  text-white">
                     <span className="text-primary-cyan font-bold">
                         We prefer quality over quantity
                     </span>
                     , thus delivering you the best of the available.
                 </h3>
-                <span className="text-secondary-text">
+                <span className="text-secondary-text lg:text-md text-sm">
                     {static_text.en.contentquality}
                 </span>
             </div>
