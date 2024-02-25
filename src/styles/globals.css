@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox and other browsers supporting standard scrollbar properties */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
 .highlights {
     color: "#2ADCBC";
+}
+/* For most browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { static_images } from "@/static/static_images";
 import Image from "next/image";
@@ -25,13 +26,16 @@ export default function InitialNavbar() {
                 </Link>
                 <div className="flex items-center gap-4 ">
                     <div className="text-white flex gap-4  text-sm">
-                        <Link href="Home">Home</Link>
-                        <Link href="Home">About Us</Link>
-                        <Link href="Home">Pricing</Link>
+                        <Link href="/">Home</Link>
+                        <Link href="/about-us">About Us</Link>
+                        <Link href="/pricing">Pricing</Link>
                         <LanguagesDrawer />
                     </div>
-                    <Button className="rounded-full bg-primary-cyan text-black px-6 hover:bg-white hover:text-white">
-                        Sign In
+                    <Button
+                        asChild
+                        className="rounded-full bg-primary-cyan text-black px-6 hover:bg-white hover:text-white"
+                    >
+                        <Link href="/onboard">Sign In</Link>
                     </Button>
                 </div>
             </div>

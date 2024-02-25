@@ -4,6 +4,7 @@ import { general_sans } from "@/fonts/fonts";
 import { Toaster } from "@/components/ui/sonner";
 import { twMerge } from "tailwind-merge";
 import Footer from "@/components/Common/Footer/Footer";
+import InitialNavbar from "@/components/Common/Navigation/InitialNavbar";
 
 export const metadata: Metadata = {
     title: "CatchMFlix",
@@ -20,6 +21,7 @@ export default function RootLayout({
             <body
                 className={twMerge(general_sans.className, "bg-design-black")}
             >
+                <InitialNavbar />
                 {children}
                 <Toaster />
                 <Footer />

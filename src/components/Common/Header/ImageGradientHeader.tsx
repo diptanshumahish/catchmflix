@@ -1,3 +1,4 @@
+import { static_images } from "@/static/static_images";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ export default function ImageGradientHeader({ imageLink }: Props) {
     return (
         <>
             <Image
-                src={imageLink}
+                src={imageLink ?? static_images.blur_image}
                 height={900}
                 width={1920}
                 alt="Background image"

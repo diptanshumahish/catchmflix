@@ -8,11 +8,16 @@ export default function BottomCards() {
     return (
         <div className="w-full">
             <div className="opacity-30">
-                <InfiniteMovingCards items={imgs} pauseOnHover={false} />
+                <InfiniteMovingCards
+                    speed="slow"
+                    items={imgs}
+                    pauseOnHover={false}
+                />
                 <InfiniteMovingCards
                     items={imgs}
                     pauseOnHover={false}
                     direction="right"
+                    speed="slow"
                 />
             </div>
             <div className="flex flex-col py-6  gap-2 items-center justify-center  text-primary-cyan">
