@@ -19,8 +19,8 @@ export default function Footer() {
             </div>
             <div className="flex flex-col lg:items-center lg:justify-center text-white">
                 <span className="text-sm text-secondary-text">Quick Links</span>
-                <Link href="/">Privacy Policy</Link>
-                <Link href="/">Terms & conditions</Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/privacy-policy">Terms & conditions</Link>
                 <span className="text-secondary-text">
                     &copy; CatchMFlix 2024
                 </span>

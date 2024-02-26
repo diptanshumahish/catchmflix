@@ -32,3 +32,22 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: red;
+}
+strong {
+    color: white;
+}
+.privacy p {
+    padding: 10px 0;
+}
+.privacy h1 {
+    font-size: 40px;
+}
+.privacy a {
+    color: cyan;
+    text-decoration: underline;
+}
