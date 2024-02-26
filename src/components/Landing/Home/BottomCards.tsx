@@ -6,7 +6,7 @@ import React from "react";
 const imgs = static_images.dummyBackgrounds;
 export default function BottomCards() {
     return (
-        <div className="w-full">
+        <div className="w-full ">
             <div className="opacity-30">
                 <InfiniteMovingCards
                     speed="slow"
@@ -20,7 +20,7 @@ export default function BottomCards() {
                     speed="slow"
                 />
             </div>
-            <div className="flex flex-col py-6  gap-2 items-center justify-center  text-primary-cyan">
+            <div className="flex flex-col py-6 lg:px-0 px-[5%]  gap-2 items-center justify-center  text-primary-cyan">
                 <h3 className="text-4xl font-semibold text-center lg:max-w-[40%]">
                     {static_text.en.getReady}
                 </h3>

@@ -19,7 +19,7 @@ export default function page() {
                 <span className="z-10 lg:text-5xl text-3xl font-bold text-primary-cyan">
                     @{static_text.en.catchmflix}
                 </span>
-                <div className="text-secondary-text text-center z-10 lg:max-w-[40%] py-6 text-sm">
+                <div className="text-secondary-text text-center z-10 lg:max-w-[40%] lg:px-0 px-[5%] py-6 text-sm">
                     <span>{static_text.en.onboard1}</span>
                     <span className="font-medium text-white">
                         {static_text.en.onboard2}

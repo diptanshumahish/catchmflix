@@ -6,7 +6,7 @@ import React from "react";
 
 export default function ForMovieMakers() {
     return (
-        <div className="bg-primary-cyan w-full px-[8%] py-6 flex flex-col lg:gap-0 gap-4 ">
+        <div className="bg-primary-cyan w-full lg:px-[8%] px-[5%] py-6 flex flex-col lg:gap-0 gap-4 ">
             <span className="bg-design-black px-4 rounded-md text-primary-cyan py-1 w-fit">
                 Amazing opportunity
             </span>

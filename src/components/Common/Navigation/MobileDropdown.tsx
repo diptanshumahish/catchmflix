@@ -32,23 +32,32 @@ export default function MobileDropdown() {
                     </DrawerDescription>
                 </DrawerHeader>
                 <DrawerFooter>
-                    <DrawerClose>
-                        <div className="flex flex-col  text-white justify-center items-center py-6  gap-2 ">
-                            <Button asChild onClick={() => {}}>
-                                <Link href="/">Home</Link>
-                            </Button>
-                            <Button asChild>
-                                <Link href="/about-us">About Us</Link>
-                            </Button>
-                            <Button asChild>
-                                <Link href="/pricing">Pricing</Link>
-                            </Button>
-                            <Button
-                                asChild
-                                className=" bg-primary-cyan text-black px-6 hover:bg-white hover:text-white"
-                            >
-                                <Link href="/onboard">Sign In</Link>
-                            </Button>
+                    <div className="flex flex-col  text-white justify-center items-center py-6  gap-2 ">
+                        <Button asChild>
+                            <DrawerClose>
+                                <a href="/">Home</a>{" "}
+                            </DrawerClose>
+                        </Button>
+
+                        <Button asChild>
+                            <DrawerClose>
+                                <a href="/about-us">About Us</a>
+                            </DrawerClose>
+                        </Button>
+                        <Button asChild>
+                            <DrawerClose>
+                                <a href="/pricing">Pricing</a>
+                            </DrawerClose>
+                        </Button>
+                        <Button
+                            asChild
+                            className=" bg-primary-cyan text-black px-6 hover:bg-white hover:text-white"
+                        >
+                            <DrawerClose>
+                                <a href="/onboard">Sign In</a>
+                            </DrawerClose>
+                        </Button>
+                        <DrawerClose>
                             <span className="text-xs text-secondary-text pt-4">
                                 Language selection
                             </span>
@@ -75,7 +84,7 @@ export default function MobileDropdown() {
                                     className="text-xs"
                                     onClick={() =>
                                         toast(
-                                            "Language has been set to Tamil(TN)",
+                                            "Language has been set to Telegu(TG)",
                                             {
                                                 description: "Happy watching!",
                                                 action: {
@@ -89,9 +98,28 @@ export default function MobileDropdown() {
                                 >
                                     Telegu (TN)
                                 </Button>
-                                <Button className="text-xs">Hindi (HN)</Button>
+                                <Button
+                                    className="text-xs"
+                                    onClick={() =>
+                                        toast(
+                                            "Language has been set to Hindi(HN)",
+                                            {
+                                                description: "Happy watching!",
+                                                action: {
+                                                    label: "Done",
+                                                    onClick: () =>
+                                                        console.log("close"),
+                                                },
+                                            }
+                                        )
+                                    }
+                                >
+                                    Hindi (HN)
+                                </Button>
                             </div>
-                        </div>
+                        </DrawerClose>
+                    </div>
+                    <DrawerClose>
                         <Button variant="outline">Close</Button>
                     </DrawerClose>
                 </DrawerFooter>

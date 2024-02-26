@@ -20,7 +20,7 @@ export default function Home() {
                 <div className="z-10 lg:text-sm text-xs text-white bg-secondary-text px-4 py-1 rounded-full bg-opacity-20 border border-white border-opacity-20">
                     {static_text.en.landingTop}
                 </div>
-                <h2 className="z-10 lg:text-5xl md:text-4xl text-3xl font-medium text-white lg:max-w-[30%]  text-center">
+                <h2 className="z-10 lg:text-5xl md:text-4xl text-3xl font-medium lg:px-0 px-[5%] text-white lg:max-w-[30%]  text-center">
                     {static_text.en.landing_header1}{" "}
                     <span className="font-semibold text-primary-cyan">
                         {static_text.en.landing_header2}

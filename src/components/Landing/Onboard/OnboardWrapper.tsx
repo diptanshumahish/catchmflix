@@ -8,8 +8,8 @@ import Login from "./Login";
 import Register from "./Register";
 export default function OnboardWrapper() {
     return (
-        <div className="py-[5%] z-10">
-            <Tabs defaultValue="Login" className="lg:w-[900px] w-[300px]">
+        <div className="py-[5%] z-10 flex items-center justify-center">
+            <Tabs defaultValue="Login" className="lg:w-[900px] w-[90%]">
                 <TabsList className="grid w-full grid-cols-2">
                     <TabsTrigger value="Login">Login</TabsTrigger>
                     <TabsTrigger value="Register">Register</TabsTrigger>
