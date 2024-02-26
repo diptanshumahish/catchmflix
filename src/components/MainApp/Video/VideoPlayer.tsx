@@ -58,15 +58,20 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc, poster }) => {
     const dur = videoRef.current?.duration ?? 0;
 
     const toggleFullScreen = () => {
-        if (document.fullscreenElement === null) {
-            videoRef.current?.requestFullscreen();
-        } else {
+        if (typeof document !== "undefined" && document.fullscreenElement) {
             document.exitFullscreen();
+        } else if (videoRef.current) {
+            videoRef.current.requestFullscreen();
         }
     };
+
+    // Only update volume state on client-side (browser environment)
     useEffect(() => {
-        setVolume(videoRef.current?.volume ?? 0);
-    }, []);
+        if (typeof document !== "undefined" && videoRef.current) {
+            setVolume(videoRef.current.volume);
+            setFull(document.fullscreenElement !== null ? true : false);
+        }
+    }, [videoRef.current]);
 
     return (
         <div className="relative">
@@ -97,9 +102,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoSrc, poster }) => {
                 onProgressChange={handleProgressChange}
                 onSkipForward={handleSkipForward}
                 onSkipBackward={handleSkipBackward}
-                isFullscreen={
-                    document.fullscreenElement !== null ? true : false
-                }
+                isFullscreen={full}
                 onFullscreen={toggleFullScreen}
                 volume={volume}
             />
