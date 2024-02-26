@@ -31,21 +31,63 @@ export default function LanguagesDrawer() {
                 </DrawerHeader>
                 <DrawerFooter>
                     <div className="flex items-center gap-4 py-4 justify-center flex-wrap">
-                        <Button
-                            onClick={() =>
-                                toast("Language has been set to English(EN)", {
-                                    description: "Happy watching!",
-                                    action: {
-                                        label: "Done",
-                                        onClick: () => console.log("close"),
-                                    },
-                                })
-                            }
-                        >
-                            English (EN)
-                        </Button>
-                        <Button>Telegu (TN)</Button>
-                        <Button>Hindi (HN)</Button>
+                        <DrawerClose>
+                            <Button
+                                onClick={() =>
+                                    toast(
+                                        "Language has been set to English(EN)",
+                                        {
+                                            description: "Happy watching!",
+                                            action: {
+                                                label: "Done",
+                                                onClick: () =>
+                                                    console.log("close"),
+                                            },
+                                        }
+                                    )
+                                }
+                            >
+                                English (EN)
+                            </Button>
+                        </DrawerClose>
+                        <DrawerClose>
+                            <Button
+                                onClick={() =>
+                                    toast(
+                                        "Language has been set to Telegu(TG)",
+                                        {
+                                            description: "Happy watching!",
+                                            action: {
+                                                label: "Done",
+                                                onClick: () =>
+                                                    console.log("close"),
+                                            },
+                                        }
+                                    )
+                                }
+                            >
+                                Telegu (TN)
+                            </Button>
+                        </DrawerClose>
+                        <DrawerClose>
+                            <Button
+                                onClick={() =>
+                                    toast(
+                                        "Language has been set to Hindi(HN)",
+                                        {
+                                            description: "Happy watching!",
+                                            action: {
+                                                label: "Done",
+                                                onClick: () =>
+                                                    console.log("close"),
+                                            },
+                                        }
+                                    )
+                                }
+                            >
+                                Hindi (HN)
+                            </Button>
+                        </DrawerClose>
                     </div>
 
                     <DrawerClose>
