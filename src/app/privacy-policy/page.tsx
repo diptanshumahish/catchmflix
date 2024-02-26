@@ -4,7 +4,7 @@ import React from "react";
 export default function page() {
     return (
         <div
-            className="text-secondary-text py-[10%] px-[8%] privacy"
+            className="text-secondary-text py-[15%] lg:px-[8%] px-[5%] privacy"
             dangerouslySetInnerHTML={{ __html: privacy_policy }}
         ></div>
     );
