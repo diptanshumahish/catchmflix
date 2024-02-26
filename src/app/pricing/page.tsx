@@ -21,7 +21,7 @@ export default function page() {
                     {static_text.en.pricingDetails}
                 </span>
             </div>
-            <div className="pt-[10%] flex items-center justify-center z-10">
+            <div className="pt-[10%] lg:px-[8%] px-[5%] flex items-center justify-center z-10">
                 <PricingDiv />
             </div>
             <BottomCards />
