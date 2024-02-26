@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="text-white">
                 <span>Find Us On</span>
                 <div className="flex  gap-2 py-2">
-                    <Link href="/">
+                    <Link href="https://www.instagram.com/catchmflix?igsh=anVydzUyODRwazg1">
                         <Instagram />
                     </Link>
                     <Link href="/">

@@ -91,10 +91,11 @@ const VideoControls: React.FC<VideoControlsProps> = ({
 
     return (
         <div
+            style={{ zIndex: 100 }}
             className={twMerge(
                 hide
                     ? "hidden opacity-0 "
-                    : "absolute opacity-100  bg-black bg-opacity-40 bottom-0 w-full right-0 top-0 left-0 z-10 flex items-center justify-center ",
+                    : "absolute opacity-100  bg-black bg-opacity-40 bottom-0 w-full right-0 top-0 left-0  flex items-center justify-center ",
                 "transition-opacity"
             )}
         >

@@ -19,7 +19,7 @@ export default function ForMovieMakers() {
             <span className="lg:text-lg  lg:w-[70%]">{static_text.en.ad2}</span>
             <Button className="w-fit bg-transparent text-design-black px-0 border-b border-black rounded-none">
                 <Link
-                    href="/"
+                    href="mailto:Contact@chatchmflix.com"
                     className="flex items-center text-lg font-medium"
                 >
                     {" "}

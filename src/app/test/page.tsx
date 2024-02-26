@@ -6,7 +6,7 @@ export default function page() {
     return (
         <div>
             <VideoPlayer
-                videoSrc="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                videoSrc="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 poster={static_images.dummyBackgrounds[2]}
             />
         </div>
