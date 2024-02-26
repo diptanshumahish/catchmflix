@@ -8,7 +8,7 @@ import React from "react";
 
 export default function ComingSoon() {
     return (
-        <div className=" py-[5%] flex flex-col gap-4 items-center justify-center px-[8%] relative overflow-hidden">
+        <div className=" py-[5%] flex flex-col gap-4 items-center justify-center lg:px-[8%] px-[5%] relative overflow-hidden">
             <div className="text-primary-cyan flex flex-col gap-1 items-center justify-center">
                 <Quote size={32} />
                 <h2 className=" text-3xl font-semibold">

@@ -6,7 +6,7 @@ import React from "react";
 
 export default function HomeFeaturesTwo() {
     return (
-        <div className=" py-[5%] flex flex-col gap-4 items-center justify-center px-[8%] relative overflow-hidden">
+        <div className=" py-[5%] flex flex-col gap-4 items-center justify-center lg:px-[8%] px-[5%] relative overflow-hidden">
             <Image
                 src={static_images.dotSymbol}
                 height={400}

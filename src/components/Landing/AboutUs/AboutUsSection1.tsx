@@ -9,7 +9,7 @@ import BottomCards from "../Home/BottomCards";
 export default function AboutUsSection1() {
     const stt = static_text.en;
     return (
-        <div className="z-10 px-[8%] py-[8%] pt-[10%] flex items-center flex-col justify-center">
+        <div className="z-10 lg:px-[8%] px-[5%] py-[8%] pt-[10%] flex items-center flex-col justify-center">
             <div className="flex flex-col justify-center items-center gap-2 w-full">
                 <div className="flex items-center lg:flex-row flex-col lg:gap-0 gap-4 justify-between w-full">
                     <Image

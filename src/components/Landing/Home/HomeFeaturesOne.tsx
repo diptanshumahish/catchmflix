@@ -6,7 +6,7 @@ import React from "react";
 
 export default function HomeFeaturesOne() {
     return (
-        <div className=" pt-[10%] pb-[5%] flex flex-col gap-4 items-center justify-center px-[8%] relative overflow-hidden ">
+        <div className=" pt-[10%] pb-[5%] flex flex-col gap-4 items-center justify-center lg:px-[8%] px-[5%] relative overflow-hidden ">
             <Image
                 src={static_images.circleSymbol}
                 height={400}
