@@ -63,7 +63,7 @@ export default function page() {
                     </div>
                 </div>
                 <div className="flex items-center justify-center w-full lg:px-[8%] px-[5%]">
-                    <div className="flex flex-col items-center justify-center lg:py-8 p-[2%] gap-2 border border-white border-opacity-40 rounded-md my-4">
+                    <div className="flex flex-col items-center justify-center lg:py-8 p-[5%] gap-2 border border-white border-opacity-40 rounded-md my-4">
                         <Image
                             src={static_images.dummyBackgrounds[2]}
                             height={400}
