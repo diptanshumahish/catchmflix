@@ -8,7 +8,7 @@ export default function page() {
     return (
         <div>
             <ImageGradientHeader
-                imageLink={static_images.dummyBackgrounds[5]}
+                imageLink={static_images.dummyBackgrounds[7]}
             />
             <div className="flex flex-col gap-8 items-center  pt-[40vh] justify-center w-full">
                 <h2 className="z-10 lg:text-5xl text-3xl font-medium text-white lg:max-w-[30%] text-center">

@@ -8,6 +8,7 @@ export const static_images = {
         "/dummy/back2.jpg",
         "/dummy/back3.jpg",
         "/dummy/back4.jpg",
+        "/dummy/dummy8.jpg",
     ],
     circleSymbol: "/symbols/circles.svg",
     dotSymbol: "/symbols/dots.svg",
