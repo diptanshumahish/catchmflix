@@ -44,9 +44,14 @@ export default function MobileDropdown() {
                                 <a href="/about-us">About Us</a>
                             </DrawerClose>
                         </Button>
-                        <Button asChild>
+                        {/* <Button asChild>
                             <DrawerClose>
                                 <a href="/pricing">Pricing</a>
+                            </DrawerClose>
+                        </Button> */}
+                        <Button asChild>
+                            <DrawerClose>
+                                <a href="/prizes">Prizes</a>
                             </DrawerClose>
                         </Button>
                         <Button
