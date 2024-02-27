@@ -9,6 +9,13 @@ import InitialNavbar from "@/components/Common/Navigation/InitialNavbar";
 export const metadata: Metadata = {
     title: "CatchMFlix",
     description: "entertainment redefined",
+    openGraph: {
+        title: "CatchMFlix",
+        description: "entertainment redefined",
+        images: "https://catchmflix.vercel.app/catchmflix.png",
+        url: new URL("https://catchmflix.vercel.app"),
+    },
+    metadataBase: new URL("https://catchmflix.vercel.app"),
 };
 
 export default function RootLayout({
