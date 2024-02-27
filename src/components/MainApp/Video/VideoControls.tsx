@@ -22,6 +22,7 @@ import React, { useEffect, useRef, useState } from "react";
 import LogoImage from "@/components/Common/Logo/LogoImage";
 import { twMerge } from "tailwind-merge";
 import { Progress } from "@/components/ui/progress";
+import Hls from "hls.js";
 
 interface VideoControlsProps {
     isPlaying: boolean;
@@ -37,6 +38,8 @@ interface VideoControlsProps {
     isFullscreen: boolean;
     onFullscreen: () => void;
     volume: number;
+    quality_values: string[];
+    selectQual: (data: number) => void;
 }
 
 const VideoControls: React.FC<VideoControlsProps> = ({
@@ -88,6 +91,16 @@ const VideoControls: React.FC<VideoControlsProps> = ({
             }
         };
     }, []);
+
+    const handleQualityChange = (newQualityIndex: number) => {
+        // if (hls) {
+        //     console.log(hls.currentLevel);
+        //     hls.currentLevel = newQualityIndex;
+        // }
+        // if (onQualityChange) {
+        //     onQualityChange(newQualityIndex);
+        // }
+    };
 
     return (
         <div
@@ -208,6 +221,7 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                                     min={0}
                                 />
                                 <Progress
+                                    defaultValue={0}
                                     max={1}
                                     value={volume * 100}
                                     className="absolute  inset-0  rotate-[270deg] top-2 w-[60px] h-1  bg-white bg-opacity-30 pointer-events-none z-0"
@@ -215,6 +229,18 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
+                    {/* <select name="" id="">
+                        {quality_values.map((ele, idx) => (
+                            <option
+                                onClick={() => {
+                                    selectQual(idx);
+                                }}
+                                key={idx}
+                            >
+                                {ele}
+                            </option>
+                        ))}
+                    </select> */}
 
                     <button
                         onClick={onFullscreen}
@@ -233,7 +259,7 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                     </button>
                 </div>
 
-                {/* 
+                {/*
             <button
                 onClick={onFullscreen}
                 aria-label={
