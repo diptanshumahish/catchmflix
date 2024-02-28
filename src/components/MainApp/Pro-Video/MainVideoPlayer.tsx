@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import ReactHlsPlayer from "./ReactHlsPlayer";
 import {
     PlayCircle,
@@ -10,13 +10,15 @@ import {
 } from "lucide-react";
 import VideoControls from "../Video/VideoControls";
 import Hls from "hls.js";
+import dynamic from "next/dynamic";
 
 interface Props {
     url: string;
 }
 
-export default function MainVideoPlayer({ url }: Props) {
+const MainVideoPlayer = ({ url }: Props) => {
     const VIDEO_REF = useRef<HTMLVideoElement>(null);
+    const Container_ref = useRef<HTMLDivElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolume] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
@@ -76,39 +78,40 @@ export default function MainVideoPlayer({ url }: Props) {
     const toggleFullScreen = () => {
         if (typeof document !== "undefined" && document.fullscreenElement) {
             document.exitFullscreen();
-        } else if (VIDEO_REF.current) {
-            VIDEO_REF.current.requestFullscreen();
+        } else if (Container_ref.current) {
+            Container_ref.current.requestFullscreen();
         }
     };
     const dur = VIDEO_REF.current?.duration ?? 0;
 
     return (
-        <div className="h-screen w-screen relative">
-            <ReactHlsPlayer
-                // hls={(data) => {
-                //     setHls(data);
-                // }}
-                onLoadedMetadata={videoMetadataLoaded}
-                onTimeUpdate={() =>
-                    setCurrentTime(
-                        parseInt(
-                            VIDEO_REF.current!.currentTime.toString() ?? "0"
+        <div className="h-screen w-screen relative" ref={Container_ref}>
+            <Suspense fallback={<div>Loading</div>}>
+                <ReactHlsPlayer
+                    // hls={(data) => {
+                    //     setHls(data);
+                    // }}
+                    onLoadedMetadata={videoMetadataLoaded}
+                    onTimeUpdate={() =>
+                        setCurrentTime(
+                            parseInt(
+                                VIDEO_REF.current!.currentTime.toString() ?? "0"
+                            )
                         )
-                    )
-                }
-                muted={VIDEO_REF.current?.muted ?? false}
-                src={url}
-                playerRef={VIDEO_REF}
-                qualityValues={(val) => {
-                    setQualityVal(val);
-                }}
-                quality={selected_quality}
-            />
+                    }
+                    muted={VIDEO_REF.current?.muted ?? false}
+                    src={url}
+                    playerRef={VIDEO_REF}
+                    qualityValues={(val) => {
+                        setQualityVal(val);
+                    }}
+                    quality={selected_quality}
+                />
+            </Suspense>
             <VideoControls
                 selectQual={(data) => {
                     setSelectedQuality(data);
                 }}
-                // hls={hls ?? new Hls()}
                 onMute={handleMute}
                 isMuted={VIDEO_REF.current?.muted ?? false}
                 isPlaying={isPlaying}
@@ -126,4 +129,6 @@ export default function MainVideoPlayer({ url }: Props) {
             />
         </div>
     );
-}
+};
+
+export default dynamic(() => Promise.resolve(MainVideoPlayer), { ssr: false });

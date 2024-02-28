@@ -10,7 +10,7 @@ export default function PingScroller() {
                 height={60}
                 width={60}
                 alt="circle symbol"
-                className="object-cover"
+                className="object-cover animate-bounce"
             />
             <span className="text-secondary-text">
                 Scroll down to know more
