@@ -120,7 +120,7 @@ function ReactHlsPlayer({
                     src={src}
                     {...props}
                     autoPlay={autoPlay}
-                    className="h-screen object-cover aspect-video w-screen"
+                    className="h-screen object-cover aspect-[16/9] w-screen"
                 />
                 {/* {availableQualities.map((ele, idx) => {
                     return (

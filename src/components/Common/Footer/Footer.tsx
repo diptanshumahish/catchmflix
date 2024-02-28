@@ -31,10 +31,10 @@ export default function Footer() {
                     <Link href="https://www.instagram.com/catchmflix?igsh=anVydzUyODRwazg1">
                         <Instagram />
                     </Link>
-                    <Link href="/">
+                    {/* <Link href="/">
                         <Facebook />
-                    </Link>
-                    <Link href="/">
+                    </Link> */}
+                    <Link href="https://www.youtube.com/@CatchMFlix">
                         <Youtube />
                     </Link>
                 </div>

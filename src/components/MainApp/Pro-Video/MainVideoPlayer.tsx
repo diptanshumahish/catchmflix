@@ -86,28 +86,27 @@ const MainVideoPlayer = ({ url }: Props) => {
 
     return (
         <div className="h-screen w-screen relative" ref={Container_ref}>
-            <Suspense fallback={<div>Loading</div>}>
-                <ReactHlsPlayer
-                    // hls={(data) => {
-                    //     setHls(data);
-                    // }}
-                    onLoadedMetadata={videoMetadataLoaded}
-                    onTimeUpdate={() =>
-                        setCurrentTime(
-                            parseInt(
-                                VIDEO_REF.current!.currentTime.toString() ?? "0"
-                            )
+            <ReactHlsPlayer
+                // hls={(data) => {
+                //     setHls(data);
+                // }}
+                onLoadedMetadata={videoMetadataLoaded}
+                onTimeUpdate={() =>
+                    setCurrentTime(
+                        parseInt(
+                            VIDEO_REF.current!.currentTime.toString() ?? "0"
                         )
-                    }
-                    muted={VIDEO_REF.current?.muted ?? false}
-                    src={url}
-                    playerRef={VIDEO_REF}
-                    qualityValues={(val) => {
-                        setQualityVal(val);
-                    }}
-                    quality={selected_quality}
-                />
-            </Suspense>
+                    )
+                }
+                muted={VIDEO_REF.current?.muted ?? false}
+                src={url}
+                playerRef={VIDEO_REF}
+                qualityValues={(val) => {
+                    setQualityVal(val);
+                }}
+                quality={selected_quality}
+            />
+
             <VideoControls
                 selectQual={(data) => {
                     setSelectedQuality(data);
