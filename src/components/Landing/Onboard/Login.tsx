@@ -1,8 +1,10 @@
+"use client";
 import LogoImage from "@/components/Common/Logo/LogoImage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { static_text } from "@/static/static_text";
 import React from "react";
+import { toast } from "sonner";
 
 export default function Login() {
     return (
@@ -33,7 +35,18 @@ export default function Login() {
                         <span className="font-medium">password</span>
                         <Input type="password" placeholder="****" />
                     </div>
-                    <Button className="bg-primary-cyan text-black">
+                    <Button
+                        className="bg-primary-cyan text-black"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            toast(
+                                `Login/registrations for CatchMFlix users coming soon `,
+                                {
+                                    description: "Stay Tuned ✨",
+                                }
+                            );
+                        }}
+                    >
                         Log In
                     </Button>
                 </form>

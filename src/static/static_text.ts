@@ -1,7 +1,7 @@
 export const static_text = {
     en: {
         landing_header1: "Say",
-        landing_header2: "Hello",
+        landing_header2: "Hello ",
         landing_header3: "to your new Movies and Web series home at",
         leading_header4: "CatchMFlix",
         landingTop: "#1 Regional movie streaming in India",
@@ -44,7 +44,7 @@ export const static_text = {
         stream_text:
             "Enjoy the freedom of entertainment on your terms. Stream CatchMFlix seamlessly across various devices – be it your mobile phones, tablets, desktops, smart TVs, or other streaming gadgets. Your cinematic experience is at your fingertips, ready to enhance your moments, wherever you may be.",
         prizes_main: "Amazing opportunity for the creators!",
-        prizes_1: "Winner gets a chance to win prize money upto",
+        prizes_1: "Winner gets a chance to win prize money of",
         prizes_2: "₹5,00,000*",
 
         terms_and_conditions: "*terms and conditions apply",
