@@ -7,13 +7,25 @@ import { twMerge } from "tailwind-merge";
 export const metadata: Metadata = {
     title: "CatchMFlix",
     description: "entertainment redefined",
+    authors: [{ name: "Diptanshu Mahish" }],
     openGraph: {
         title: "CatchMFlix",
         description: "entertainment redefined",
-        images: "https://catchmflix.vercel.app/catchmflix.png",
-        url: new URL("https://catchmflix.vercel.app"),
+        images: "https://catchmflix.in/catchmflix.png",
+        url: new URL("https://catchmflix.in"),
     },
-    metadataBase: new URL("https://catchmflix.vercel.app"),
+    metadataBase: new URL("https://catchmflix.in"),
+    keywords: [
+        "CatchMflix",
+        "catchmflix",
+        "catch m flix",
+        " Catchmflix",
+        "CATCHMFLIX",
+    ],
+    robots: "index,follow",
+    applicationName: "CatchMFlix",
+    category: "entertainment",
+    creator: "Diptanshu Mahish, Pradyumna Ghoshal",
 };
 
 export default function RootLayout({

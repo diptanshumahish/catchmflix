@@ -1,7 +1,7 @@
 import React from "react";
 import LogoImage from "../Logo/LogoImage";
 import Link from "next/link";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, Phone, Youtube } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -21,12 +21,13 @@ export default function Footer() {
                 <span className="text-sm text-secondary-text">Quick Links</span>
                 <Link href="/privacy-policy">Privacy Policy</Link>
                 <Link href="/privacy-policy">Terms & conditions</Link>
+                <Link href="tel:+919281122332">+91 9281122332</Link>
                 <span className="text-secondary-text">
                     &copy; CatchMFlix 2024
                 </span>
             </div>
             <div className="text-white">
-                <span>Find Us On</span>
+                <span>Contact us on</span>
                 <div className="flex  gap-2 py-2">
                     <Link href="https://www.instagram.com/catchmflix?igsh=anVydzUyODRwazg1">
                         <Instagram />
@@ -36,6 +37,9 @@ export default function Footer() {
                     </Link> */}
                     <Link href="https://www.youtube.com/@CatchMFlix">
                         <Youtube />
+                    </Link>
+                    <Link href="tel:+919281122332">
+                        <Phone />
                     </Link>
                 </div>
             </div>
