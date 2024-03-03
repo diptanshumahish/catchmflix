@@ -1,4 +1,4 @@
-export function normalise<T>(arr: T[][]): T[] {
+export function normalize<T>(arr: T[][]): T[] {
     let final_arr: T[] = [];
 
     for (let x = 0; x < arr.length; x++) {

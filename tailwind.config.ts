@@ -45,7 +45,7 @@ const config = {
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
             },
             colors: {
-                "primary-cyan": "#2ADCBC",
+                "primary-cyan": "#316FF6",
                 "secondary-text": "#AFABBB",
                 "secondary-violet": "#231F2B",
                 "tertiary-black": "#1C1B1F",

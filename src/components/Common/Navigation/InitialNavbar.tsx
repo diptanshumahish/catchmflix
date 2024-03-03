@@ -36,7 +36,7 @@ export default function InitialNavbar() {
                     </div>
                     <Button
                         asChild
-                        className="rounded-full bg-primary-cyan text-black px-6 hover:bg-white hover:text-white"
+                        className="rounded-full bg-primary-cyan text-white px-6 hover:bg-white hover:text-white"
                     >
                         <Link href="/onboard">Sign In</Link>
                     </Button>
