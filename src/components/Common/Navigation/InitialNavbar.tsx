@@ -30,8 +30,8 @@ export default function InitialNavbar() {
                     <div className="text-white flex gap-4  text-sm">
                         <Link href="/">Home</Link>
                         <Link href="/about-us">About Us</Link>
-                        {/* <Link href="/pricing">Pricing</Link> */}
-                        <Link href="/prizes">Prizes</Link>
+                        <Link href="/pricing">Pricing</Link>
+                        {/* <Link href="/prizes">Prizes</Link> */}
                         <LanguagesDrawer />
                     </div>
                     <Button

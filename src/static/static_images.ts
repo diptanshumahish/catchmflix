@@ -6,7 +6,7 @@ export const static_images = {
         "/dummy/test2.webp",
         "/dummy/poster.webp",
         "/dummy/back2.webp",
-        "",
+        "/dummy/cam.webp",
         "/dummy/back4.webp",
         "/dummy/dummy8.webp",
     ],

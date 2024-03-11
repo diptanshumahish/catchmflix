@@ -8,7 +8,9 @@ export class User {
     declare userZipCode: number;
     declare userIsPremium: boolean;
     declare userMobileNumber: string;
+    declare userCity?: string;
     declare userAge: number;
     declare userProfiles: Profile[];
     declare userIsLoggedIn: boolean;
+    declare userReceiveUpdates: boolean;
 }

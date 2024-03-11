@@ -13,7 +13,9 @@ import {
 import { Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import useLanguage from "@/state-management/state/language.state";
 export default function LanguagesDrawer() {
+    const { lang, setLang } = useLanguage();
     return (
         <Drawer>
             <DrawerTrigger className="flex items-center gap-1">
@@ -33,7 +35,8 @@ export default function LanguagesDrawer() {
                     <div className="flex items-center gap-4 py-4 justify-center flex-wrap">
                         <DrawerClose>
                             <Button
-                                onClick={() =>
+                                onClick={() => {
+                                    setLang({ lang: "en" });
                                     toast(
                                         "Language has been set to English(EN)",
                                         {
@@ -44,48 +47,26 @@ export default function LanguagesDrawer() {
                                                     console.log("close"),
                                             },
                                         }
-                                    )
-                                }
+                                    );
+                                }}
                             >
                                 English (EN)
                             </Button>
                         </DrawerClose>
                         <DrawerClose>
                             <Button
-                                onClick={() =>
-                                    toast(
-                                        "Language has been set to Telegu(TG)",
-                                        {
-                                            description: "Happy watching!",
-                                            action: {
-                                                label: "Done",
-                                                onClick: () =>
-                                                    console.log("close"),
-                                            },
-                                        }
-                                    )
-                                }
+                                onClick={() => {
+                                    setLang({ lang: "tg" });
+                                    toast("భాష తెలుగుకు సెట్ చేయబడింది", {
+                                        description: "చూడటం ఆనందంగా ఉంది!",
+                                        action: {
+                                            label: "పూర్తి",
+                                            onClick: () => console.log("close"),
+                                        },
+                                    });
+                                }}
                             >
-                                Telegu (TN)
-                            </Button>
-                        </DrawerClose>
-                        <DrawerClose>
-                            <Button
-                                onClick={() =>
-                                    toast(
-                                        "Language has been set to Hindi(HN)",
-                                        {
-                                            description: "Happy watching!",
-                                            action: {
-                                                label: "Done",
-                                                onClick: () =>
-                                                    console.log("close"),
-                                            },
-                                        }
-                                    )
-                                }
-                            >
-                                Hindi (HN)
+                                Telugu
                             </Button>
                         </DrawerClose>
                     </div>

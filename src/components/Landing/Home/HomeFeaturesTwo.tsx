@@ -1,10 +1,14 @@
+"use client";
+import useLanguage from "@/state-management/state/language.state";
 import { static_images } from "@/static/static_images";
-import { static_text } from "@/static/static_text";
+import { getStaticText, static_text } from "@/static/static_text";
 import { Crown } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 export default function HomeFeaturesTwo() {
+    const { lang } = useLanguage();
+    const stt = getStaticText(lang.lang);
     return (
         <div className=" py-[5%] flex flex-col gap-4 items-center justify-center lg:px-[8%] px-[5%] relative overflow-hidden">
             <Image
@@ -16,9 +20,9 @@ export default function HomeFeaturesTwo() {
             />
             <div className="flex flex-col gap-1 items-center justify-center text-primary-cyan">
                 <Crown size={25} />
-                <h2 className=" text-3xl font-semibold">Amazing Content</h2>
+                <h2 className=" text-3xl font-semibold">{stt.amazc}</h2>
                 <span className="text-sm text-secondary-text">
-                    (Rather the best content you can find!)
+                    ({stt.rather})
                 </span>
             </div>
             <Image
@@ -31,12 +35,12 @@ export default function HomeFeaturesTwo() {
             <div className="border-l-4 flex flex-col gap-4 border-primary-cyan pl-6">
                 <h3 className="lg:text-4xl text-2xl  text-white">
                     <span className="text-primary-cyan font-bold">
-                        We prefer quality over quantity
+                        {stt.qlty}
                     </span>
-                    , thus delivering you the best of the available.
+                    , {stt.bestA}
                 </h3>
                 <span className="text-secondary-text lg:text-md text-sm">
-                    {static_text.en.contentquality}
+                    {stt.contentquality}
                 </span>
             </div>
         </div>

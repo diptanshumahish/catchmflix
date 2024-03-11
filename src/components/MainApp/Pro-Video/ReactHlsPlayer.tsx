@@ -25,7 +25,7 @@ function ReactHlsPlayer({
     src,
     // hls,
     onQualityChange,
-    autoPlay = true,
+    autoPlay = false,
     quality,
     qualityValues,
     ...props
@@ -60,7 +60,7 @@ function ReactHlsPlayer({
             });
         });
 
-        setHlsState(newHls);
+        // setHlsState(newHls);
     }
 
     useLayoutEffect(() => {

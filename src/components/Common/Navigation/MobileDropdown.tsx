@@ -15,8 +15,10 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import Link from "next/link";
 import LanguagesDrawer from "./LanguagesDrawer";
+import useLanguage from "@/state-management/state/language.state";
 
 export default function MobileDropdown() {
+    const { setLang } = useLanguage();
     return (
         <Drawer>
             <DrawerTrigger className="flex items-center lg:hidden">
@@ -44,14 +46,9 @@ export default function MobileDropdown() {
                                 <a href="/about-us">About Us</a>
                             </DrawerClose>
                         </Button>
-                        {/* <Button asChild>
-                            <DrawerClose>
-                                <a href="/pricing">Pricing</a>
-                            </DrawerClose>
-                        </Button> */}
                         <Button asChild>
                             <DrawerClose>
-                                <a href="/prizes">Prizes</a>
+                                <a href="/pricing">Pricing</a>
                             </DrawerClose>
                         </Button>
                         <Button
@@ -67,43 +64,53 @@ export default function MobileDropdown() {
                                 Language selection
                             </span>
                             <div className="flex items-center  gap-1  justify-center flex-wrap">
-                                <Button
-                                    className="text-xs"
-                                    onClick={() =>
-                                        toast(
-                                            "Language has been set to English(EN)",
-                                            {
-                                                description: "Happy watching!",
-                                                action: {
-                                                    label: "Done",
-                                                    onClick: () =>
-                                                        console.log("close"),
-                                                },
-                                            }
-                                        )
-                                    }
-                                >
-                                    English (EN)
-                                </Button>
-                                <Button
-                                    className="text-xs"
-                                    onClick={() =>
-                                        toast(
-                                            "Language has been set to Telegu(TG)",
-                                            {
-                                                description: "Happy watching!",
-                                                action: {
-                                                    label: "Done",
-                                                    onClick: () =>
-                                                        console.log("close"),
-                                                },
-                                            }
-                                        )
-                                    }
-                                >
-                                    Telegu (TN)
-                                </Button>
-                                <Button
+                                <DrawerClose>
+                                    <Button
+                                        onClick={() => {
+                                            setLang({ lang: "en" });
+                                            toast(
+                                                "Language has been set to English(EN)",
+                                                {
+                                                    description:
+                                                        "Happy watching!",
+                                                    action: {
+                                                        label: "Done",
+                                                        onClick: () =>
+                                                            console.log(
+                                                                "close"
+                                                            ),
+                                                    },
+                                                }
+                                            );
+                                        }}
+                                    >
+                                        English
+                                    </Button>
+                                </DrawerClose>
+                                <DrawerClose>
+                                    <Button
+                                        onClick={() => {
+                                            setLang({ lang: "tg" });
+                                            toast(
+                                                "భాష తెలుగుకు సెట్ చేయబడింది",
+                                                {
+                                                    description:
+                                                        "చూడటం ఆనందంగా ఉంది!",
+                                                    action: {
+                                                        label: "పూర్తి",
+                                                        onClick: () =>
+                                                            console.log(
+                                                                "close"
+                                                            ),
+                                                    },
+                                                }
+                                            );
+                                        }}
+                                    >
+                                        Telugu
+                                    </Button>
+                                </DrawerClose>
+                                {/* <Button
                                     className="text-xs"
                                     onClick={() =>
                                         toast(
@@ -120,7 +127,7 @@ export default function MobileDropdown() {
                                     }
                                 >
                                     Hindi (HN)
-                                </Button>
+                                </Button> */}
                             </div>
                         </DrawerClose>
                     </div>
