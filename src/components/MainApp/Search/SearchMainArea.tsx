@@ -41,7 +41,7 @@ const genreCards = [
 
 export default function SearchMainArea() {
     return (
-        <div className="py-[5%] text-white lg:px-[8%] flex justify-between px-[5%]">
+        <div className="py-[5%] text-white lg:px-[8%] flex lg:flex-row flex-col lg:gap-0 gap-4 justify-between px-[5%]">
             <div className="lg:w-[70%]">
                 <h2 className="lg:text-3xl text-2xl font-medium  ">
                     ✨ Search for your desired content

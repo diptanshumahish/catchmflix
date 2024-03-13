@@ -48,7 +48,7 @@ const data: SearchCardFull[] = [
 
 export default function page(props: Props) {
     return (
-        <div className="lg:px-[8%] py-[2%] text-white">
+        <div className="lg:px-[8%] px-[2%] py-[2%] text-white">
             <div>
                 <form action="" className="w-full flex items-center py-4 gap-4">
                     <input
@@ -67,7 +67,7 @@ export default function page(props: Props) {
                         showing results for &quot;
                         {prettify(props.searchParams.search)}&quot;
                     </h3>
-                    <div className="flex flex-col gap-4 py-6 w-[60%]">
+                    <div className="flex flex-col gap-4 py-6 lg:w-[60%]">
                         {data.map((ele, idx) => (
                             <SearchFullCardRender prop={ele} key={idx} />
                         ))}

@@ -23,6 +23,14 @@ import LogoImage from "@/components/Common/Logo/LogoImage";
 import { twMerge } from "tailwind-merge";
 import { Progress } from "@/components/ui/progress";
 import Hls from "hls.js";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
+import { static_images } from "@/static/static_images";
 
 interface VideoControlsProps {
     isPlaying: boolean;
@@ -56,8 +64,31 @@ const VideoControls: React.FC<VideoControlsProps> = ({
     onFullscreen,
     isFullscreen,
     volume,
+    selectQual,
+    quality_values,
 }) => {
     const [hide, setHide] = useState(false);
+    const [quality, setQuality] = useState(-1);
+
+    function checkQuality(): string {
+        switch (quality) {
+            case -1:
+                return "Auto";
+            case 0:
+                return "SD";
+            case 1:
+                return "SD+";
+            case 2:
+                return "HD";
+            case 3:
+                return "HD+";
+            case 4:
+                return "2K";
+
+            default:
+                return "Auto";
+        }
+    }
 
     const formatTime = (seconds: number) => {
         const hours = Math.floor(seconds / 3600);
@@ -72,12 +103,12 @@ const VideoControls: React.FC<VideoControlsProps> = ({
     useEffect(() => {
         let timeRe: ReturnType<typeof setTimeout> | null = null;
 
-        timeRe = setTimeout(() => setHide(true), 5000);
+        timeRe = setTimeout(() => setHide(true), 3000);
         const handleMouseMove = () => {
             setHide(false);
             if (timeRe) {
                 clearTimeout(timeRe);
-                timeRe = setTimeout(() => setHide(true), 5000);
+                timeRe = setTimeout(() => setHide(true), 3000);
             }
         };
 
@@ -91,16 +122,6 @@ const VideoControls: React.FC<VideoControlsProps> = ({
             }
         };
     }, []);
-
-    const handleQualityChange = (newQualityIndex: number) => {
-        // if (hls) {
-        //     console.log(hls.currentLevel);
-        //     hls.currentLevel = newQualityIndex;
-        // }
-        // if (onQualityChange) {
-        //     onQualityChange(newQualityIndex);
-        // }
-    };
 
     return (
         <div
@@ -135,14 +156,20 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                             <TooltipTrigger>
                                 <button
                                     onClick={onSkipBackward}
-                                    aria-label="Skip 30 seconds backward"
+                                    aria-label="rewind 10 seconds"
                                     className=" text-white size-14 active:bg-white active:bg-opacity-10 active:scale-90 transition-colors rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-5"
                                 >
-                                    <UndoDot size={30} className="size-10 " />
+                                    <img
+                                        width="40"
+                                        height="40"
+                                        src="https://img.icons8.com/ios-glyphs/100/replay-10.png"
+                                        alt="replay-10"
+                                        className="invert"
+                                    />
                                 </button>
                             </TooltipTrigger>
-                            <TooltipContent>
-                                <p>Skip 30 seconds</p>
+                            <TooltipContent className="bg-white bg-opacity-5 border-none text-white">
+                                <p>Rewind 10 seconds</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
@@ -153,9 +180,20 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                         className="text-white size-18 active:bg-white active:bg-opacity-10 active:scale-90 transition-colors rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-5 "
                     >
                         {isPlaying ? (
-                            <PauseCircle size={30} className="size-16" />
+                            <img
+                                width="50"
+                                height="50"
+                                src="https://img.icons8.com/ios-filled/50/circled-pause.png"
+                                alt="circled-pause"
+                                className="invert"
+                            />
                         ) : (
-                            <PlayCircle size={30} className="size-16" />
+                            <img
+                                width="50"
+                                height="50"
+                                src="https://img.icons8.com/ios-filled/50/circled-play.png"
+                                className="invert"
+                            />
                         )}
                     </button>
                     <button
@@ -163,10 +201,16 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                         aria-label="Skip 30 seconds backward"
                         className=" text-white size-14 active:bg-white active:bg-opacity-10 active:scale-90 transition-colors rounded-full flex items-center justify-center hover:bg-white hover:bg-opacity-5"
                     >
-                        <RedoDot size={30} className="size-10 " />
+                        <img
+                            width="40"
+                            height="40"
+                            src="https://img.icons8.com/ios-glyphs/60/forward-10.png"
+                            alt="forward-10"
+                            className="invert"
+                        />
                     </button>
                 </div>
-                <div className="flex items-center px-[1%] gap-4 z-20 absolute w-full justify-between bottom-4 left-0 right-0">
+                <div className="flex items-center px-[1%] gap-4 z-50 absolute w-full justify-between bottom-4 left-0 right-0">
                     <LogoImage size={15} />
                     <span className="text-white text-sm w-[60px]">
                         {formatTime(currentTime)}
@@ -229,18 +273,33 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
-                    {/* <select name="" id="">
-                        {quality_values.map((ele, idx) => (
-                            <option
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="text-white text-sm hover:text-primary-cyan">
+                            {checkQuality()}
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="bg-white bg-opacity-5 text-white">
+                            {quality_values.map((ele, idx) => (
+                                <DropdownMenuItem
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        selectQual(idx);
+                                        setQuality(idx);
+                                    }}
+                                    key={idx}
+                                >
+                                    {ele}
+                                </DropdownMenuItem>
+                            ))}
+                            <DropdownMenuItem
                                 onClick={() => {
-                                    selectQual(idx);
+                                    selectQual(-1);
+                                    setQuality(-1);
                                 }}
-                                key={idx}
                             >
-                                {ele}
-                            </option>
-                        ))}
-                    </select> */}
+                                Auto
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
                     <button
                         onClick={onFullscreen}
@@ -258,41 +317,6 @@ const VideoControls: React.FC<VideoControlsProps> = ({
                         )}
                     </button>
                 </div>
-
-                {/*
-            <button
-                onClick={onFullscreen}
-                aria-label={
-                    isFullscreen ? "Exit fullscreen" : "Enter fullscreen"
-                }
-                className="w-8 h-8 rounded-full bg-transparent text-gray-400 hover:bg-gray-200 focus:ring-2 focus:ring-white focus:ring-opacity-50"
-            >
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="w-4 h-4 fill-current"
-                >
-                    {isFullscreen ? (
-                        <path d="M5 19h14v-4H5v4zm9-11H5V5h9v4z" />
-                    ) : (
-                        <path d="M7 14h10v8H7v-8zm14-11V5l-7 7-7-7v6H5v14h14v-14z" />
-                    )}
-                </svg>
-            </button>
-            <div className="relative w-full">
-                <input
-                    type="range"
-                    min={0}
-                    max={1}
-                    step={0.1}
-                    value={volume}
-                    onChange={(e) => onVolumeChange(Number(e.target.value))}
-                    className="w-full bg-gray-200 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                />
-                <span className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">
-                    {Math.round(volume * 100)}%
-                </span>
-            </div> */}
             </div>
         </div>
     );

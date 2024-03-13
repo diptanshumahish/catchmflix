@@ -1,12 +1,9 @@
 import MainVideoPlayer from "@/components/MainApp/Pro-Video/MainVideoPlayer";
-import { Button } from "@/components/ui/button";
-import { static_images } from "@/static/static_images";
 import React from "react";
 
 const source4 =
-    "https://dqtojn93oycsa.cloudfront.net/assets/forestab89fa8e-5f57-4387-b43c-9e99e4da0cb3/HLS/forest.m3u8";
-// "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8";
-// "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8";
+    // "https://dqtojn93oycsa.cloudfront.net/assets/seasonsd7dc482e-e348-4b34-b9b3-07e15daabfce/HLS/seasons.m3u8";
+    "https://dqtojn93oycsa.cloudfront.net/assets/frb8af9e7c-c10c-42c4-ab40-920afa313162/HLS/fr.m3u8";
 export default function page() {
     return (
         <div>

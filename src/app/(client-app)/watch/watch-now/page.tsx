@@ -1,4 +1,5 @@
 import ContentSection from "@/components/Common/Content/ContentSection";
+import LogoImage from "@/components/Common/Logo/LogoImage";
 import HeaderSlider from "@/components/MainApp/Header/HeaderSlider";
 import { Metadata } from "next";
 import React from "react";
@@ -292,6 +293,10 @@ export default function page() {
                     },
                 ]}
             />
+            <div className="p-[5%] lg:px-[8%]">
+                <LogoImage size={90} />
+                <h2 className="text-xl text-white font-bold">CatchMFlix</h2>
+            </div>
         </div>
     );
 }
