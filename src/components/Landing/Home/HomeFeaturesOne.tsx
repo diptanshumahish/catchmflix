@@ -1,14 +1,11 @@
-"use client";
-import useLanguage from "@/state-management/state/language.state";
 import { static_images } from "@/static/static_images";
-import { getStaticText, static_text } from "@/static/static_text";
 import { Sparkle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 export default function HomeFeaturesOne() {
-    const { lang } = useLanguage();
-    const stt = getStaticText(lang.lang);
+    const t = useTranslations();
     return (
         <div className=" pt-[10%] pb-[5%] flex flex-col gap-4 items-center justify-center lg:px-[8%] px-[5%] relative overflow-hidden ">
             <Image
@@ -20,9 +17,9 @@ export default function HomeFeaturesOne() {
             />
             <div className="flex flex-col gap-1 items-center justify-center text-primary-cyan">
                 <Sparkle size={25} />
-                <h2 className=" text-3xl font-semibold">{stt.freewatch}</h2>
+                <h2 className=" text-3xl font-semibold">{t("freewatch")}</h2>
                 <span className="text-sm text-secondary-text">
-                    ({stt.catch})
+                    ({t("catch")})
                 </span>
             </div>
             <Image
@@ -35,12 +32,12 @@ export default function HomeFeaturesOne() {
             <div className="border-l-4 flex flex-col gap-4 border-primary-cyan pl-6">
                 <h3 className="lg:text-4xl text-2xl  text-white">
                     <span className="text-primary-cyan font-bold">
-                        {stt.ft1}
+                        {t("ft1")}
                     </span>
-                    , {stt.ft2}
+                    , {t("ft2")}
                 </h3>
                 <span className="text-secondary-text lg:text-md text-sm">
-                    {stt.noCatch}
+                    {t("noCatch")}
                 </span>
             </div>
         </div>

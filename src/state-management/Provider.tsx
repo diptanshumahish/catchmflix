@@ -10,9 +10,10 @@ import { configureStore, Store } from "@reduxjs/toolkit";
 // import { userSlice } from "./store/user.store";
 import React from "react";
 import { languageSlice } from "./store/language.store";
+import { userSlice } from "./store/user.store";
 
 export const reducer = {
-    // [userSlice.name]: userSlice.reducer,
+    [userSlice.name]: userSlice.reducer,
     [languageSlice.name]: languageSlice.reducer,
 };
 
@@ -45,6 +46,7 @@ export default function StateProvider({
         if (!listener) return;
         const unsubscribe = allStore.subscribe(() => {
             const storeData = allStore.getState();
+            console.log("listener :", storeData);
             listener(storeData);
         });
 

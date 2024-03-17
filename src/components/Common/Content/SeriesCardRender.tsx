@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import NewLink from "../Navigation/NewLink";
 
 interface Props {
     se: SeriesCard;
@@ -19,8 +20,8 @@ export default function SeriesCardRender({ se }: Props) {
                     alt={se.seriesTitle}
                     className="rounded-lg h-[200px] object-cover shadow-sm"
                 />
-                <Link
-                    href={se.seriesWatchLink}
+                <NewLink
+                    link={se.seriesWatchLink}
                     className="absolute inset-0 opacity-60 bg-gradient-to-b from-transparent hover:opacity-100 transition-opacity  to-design-black"
                 />
                 <div className="absolute bottom-2   left-2 text-xs flex items-center gap-2">
@@ -40,17 +41,22 @@ export default function SeriesCardRender({ se }: Props) {
                     />
                 )}
             </div>
-            <Link href={se.seriesWatchLink}>
-                <span className="uppercase text-xs text-secondary-text">
-                    {se.seriesGenre[0].genreName}
-                </span>
-                <h2 className="line-clamp-1 font-medium text-lg">
-                    {se.seriesTitle}
-                </h2>
-                <span className="text-xs text-secondary-text line-clamp-2">
-                    {se.seriesDesc}
-                </span>
-            </Link>
+            <NewLink
+                link={se.seriesWatchLink}
+                data={
+                    <>
+                        <span className="uppercase text-xs text-secondary-text">
+                            {se.seriesGenre[0].genreName}
+                        </span>
+                        <h2 className="line-clamp-1 font-medium text-lg">
+                            {se.seriesTitle}
+                        </h2>
+                        <span className="text-xs text-secondary-text line-clamp-2">
+                            {se.seriesDesc}
+                        </span>
+                    </>
+                }
+            />
         </div>
     );
 }

@@ -7,6 +7,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import Link from "next/link";
+import NewLink from "@/components/Common/Navigation/NewLink";
 
 const data: {
     type: "video" | "poster";
@@ -120,10 +121,15 @@ export default function MovieHeader() {
                                 asChild
                                 className="bg-white text-black lg:w-fit "
                             >
-                                <Link href="/test">
-                                    <Play fill="black" size={15} />{" "}
-                                    <span>Watch Now</span>
-                                </Link>
+                                <NewLink
+                                    data={
+                                        <>
+                                            <Play fill="black" size={15} />
+                                            <span>Watch Now</span>
+                                        </>
+                                    }
+                                    link="/test"
+                                />
                             </Button>
                             <Button className="bg-transparent text-white border border-white lg:w-fit ">
                                 <Plus fill="black" size={15} />{" "}

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useTransition } from "react";
 import {
     Drawer,
     DrawerClose,
@@ -13,12 +13,30 @@ import {
 import { Languages, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import Link from "next/link";
-import LanguagesDrawer from "./LanguagesDrawer";
+
+import { useRouter } from "next/navigation";
 import useLanguage from "@/state-management/state/language.state";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import NewLink from "./NewLink";
 
 export default function MobileDropdown() {
-    const { setLang } = useLanguage();
+    const { lang, setLang } = useLanguage();
+    const router = useRouter();
+    const [isPending, startTransition] = useTransition();
+
+    const onSelectChange = (sel: string) => {
+        const nextLocale = sel;
+        startTransition(() => {
+            router.replace(`/${nextLocale}`);
+        });
+    };
+    const commonstyle = "text-white";
+
     return (
         <Drawer>
             <DrawerTrigger className="flex items-center lg:hidden">
@@ -37,18 +55,26 @@ export default function MobileDropdown() {
                     <div className="flex flex-col  text-white justify-center items-center py-6  gap-2 ">
                         <Button asChild>
                             <DrawerClose>
-                                <a href="/">Home</a>{" "}
+                                <NewLink anchor link="/" content="Home" />
                             </DrawerClose>
                         </Button>
 
                         <Button asChild>
                             <DrawerClose>
-                                <a href="/about-us">About Us</a>
+                                <NewLink
+                                    anchor
+                                    link="/about-us"
+                                    content="About Us"
+                                />
                             </DrawerClose>
                         </Button>
                         <Button asChild>
                             <DrawerClose>
-                                <a href="/pricing">Pricing</a>
+                                <NewLink
+                                    anchor
+                                    link="/pricing"
+                                    content="Pricing"
+                                />
                             </DrawerClose>
                         </Button>
                         <Button
@@ -56,79 +82,84 @@ export default function MobileDropdown() {
                             className=" bg-primary-cyan text-black px-6 hover:bg-white hover:text-white"
                         >
                             <DrawerClose>
-                                <a href="/onboard">Sign In</a>
+                                <NewLink
+                                    anchor
+                                    link="/onboard"
+                                    content="Sign In"
+                                />
                             </DrawerClose>
                         </Button>
                         <DrawerClose>
                             <span className="text-xs text-secondary-text pt-4">
                                 Language selection
                             </span>
-                            <div className="flex items-center  gap-1  justify-center flex-wrap">
-                                <DrawerClose>
-                                    <Button
-                                        onClick={() => {
-                                            setLang({ lang: "en" });
-                                            toast(
-                                                "Language has been set to English(EN)",
-                                                {
-                                                    description:
-                                                        "Happy watching!",
-                                                    action: {
-                                                        label: "Done",
-                                                        onClick: () =>
-                                                            console.log(
-                                                                "close"
-                                                            ),
-                                                    },
-                                                }
-                                            );
-                                        }}
-                                    >
-                                        English
-                                    </Button>
-                                </DrawerClose>
-                                <DrawerClose>
-                                    <Button
-                                        onClick={() => {
-                                            setLang({ lang: "tg" });
-                                            toast(
-                                                "భాష తెలుగుకు సెట్ చేయబడింది",
-                                                {
-                                                    description:
-                                                        "చూడటం ఆనందంగా ఉంది!",
-                                                    action: {
-                                                        label: "పూర్తి",
-                                                        onClick: () =>
-                                                            console.log(
-                                                                "close"
-                                                            ),
-                                                    },
-                                                }
-                                            );
-                                        }}
-                                    >
-                                        Telugu
-                                    </Button>
-                                </DrawerClose>
-                                {/* <Button
-                                    className="text-xs"
-                                    onClick={() =>
-                                        toast(
-                                            "Language has been set to Hindi(HN)",
-                                            {
-                                                description: "Happy watching!",
-                                                action: {
-                                                    label: "Done",
-                                                    onClick: () =>
-                                                        console.log("close"),
-                                                },
-                                            }
-                                        )
-                                    }
-                                >
-                                    Hindi (HN)
-                                </Button> */}
-                            </div>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger className="w-full flex items-center justify-center">
+                                    <div className="text-white flex items-center gap-1 w-fit justify-center p-2 border border-white rounded-md border-opacity-20">
+                                        Change <Languages />
+                                    </div>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className="bg-black border border-white border-opacity-20">
+                                    <DropdownMenuItem className={commonstyle}>
+                                        <DrawerClose
+                                            onClick={() => {
+                                                setLang({ lang: "en" });
+                                                onSelectChange("en");
+                                            }}
+                                        >
+                                            English
+                                        </DrawerClose>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem className={commonstyle}>
+                                        <DrawerClose>
+                                            <DrawerClose
+                                                onClick={() => {
+                                                    setLang({ lang: "tg" });
+                                                    onSelectChange("te");
+                                                }}
+                                            >
+                                                Telugu
+                                            </DrawerClose>
+                                        </DrawerClose>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem className={commonstyle}>
+                                        <DrawerClose>
+                                            <DrawerClose
+                                                onClick={() => {
+                                                    setLang({ lang: "hi" });
+                                                    onSelectChange("hi");
+                                                }}
+                                            >
+                                                Hindi
+                                            </DrawerClose>
+                                        </DrawerClose>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem className={commonstyle}>
+                                        <DrawerClose>
+                                            <DrawerClose
+                                                onClick={() => {
+                                                    setLang({ lang: "kn" });
+                                                    onSelectChange("kn");
+                                                }}
+                                            >
+                                                Kannada
+                                            </DrawerClose>
+                                        </DrawerClose>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem className={commonstyle}>
+                                        <DrawerClose>
+                                            <DrawerClose
+                                                onClick={() => {
+                                                    setLang({ lang: "ta" });
+                                                    onSelectChange("ta");
+                                                }}
+                                            >
+                                                Tamil
+                                            </DrawerClose>
+                                        </DrawerClose>
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                         </DrawerClose>
                     </div>
                     <DrawerClose>

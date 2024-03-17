@@ -8,11 +8,12 @@ import {
     // userState,
 } from "@/state-management/";
 import useLanguage from "@/state-management/state/language.state";
+import userState from "@/state-management/state/user.state";
 import { LanguageState } from "@/state-management/store/language.store";
 import { getCookie, hasCookie, setCookie } from "cookies-next";
 import { ReceiptRussianRuble } from "lucide-react";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // import bookmark from "@/api-management/endpoints/bookmark";
 // import useBookmark from "@/state-management/state/bookmark.state";
@@ -23,7 +24,7 @@ import React, { useEffect, useRef } from "react";
 // }
 function saveLanguageData(data: LanguageState) {
     localStorage.setItem("lang", JSON.stringify(data));
-    setCookie("lang", data.lang);
+    //setCookie("lang", data.lang);
 }
 export default function ClientProvider({ children }: React.PropsWithChildren) {
     return (
@@ -46,8 +47,6 @@ export default function ClientProvider({ children }: React.PropsWithChildren) {
 type StartupApis = "user" | "lang";
 
 function MainApp({ children }: React.PropsWithChildren) {
-    // const { user, setUser } = userState();
-    // const { setBookmarkFolders } = useBookmark();
     const { lang, setLang } = useLanguage();
     const fetched = useRef<StartupApis[]>([]);
     // const user_query = auth.queries.useUser({
@@ -131,11 +130,10 @@ function MainApp({ children }: React.PropsWithChildren) {
         }
     }, []);
 
-    // if (!user.client_ready)
+    // if (!loaded)
     //     return (
-    //         <div className="h-screen w-screen flex-col flex items-center justify-center text-font-tertiary">
+    //         <div className="h-screen w-screen flex-col flex items-center justify-center text-white animate-pulse">
     //             Loading
-    //             <LoadingColorIndicator />
     //         </div>
     //     );
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import { general_sans } from "@/fonts/fonts";
 import { Toaster } from "@/components/ui/sonner";
 import { twMerge } from "tailwind-merge";
@@ -30,11 +30,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
+    params: { locale },
 }: Readonly<{
     children: React.ReactNode;
+    params: { locale: string };
 }>) {
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body
                 className={twMerge(general_sans.className, "bg-design-black")}
             >

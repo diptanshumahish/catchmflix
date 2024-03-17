@@ -1,25 +1,23 @@
-"use client";
 import LogoImage from "@/components/Common/Logo/LogoImage";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { prettify } from "@/services/extensions/string";
-import useLanguage from "@/state-management/state/language.state";
-import { getStaticText, static_text } from "@/static/static_text";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { toast } from "sonner";
+import LoginButton from "./LoginButton";
 
 export default function Login() {
-    const { lang } = useLanguage();
-    const stt = getStaticText(lang.lang);
+    const t = useTranslations();
     return (
         <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between">
             <div className="flex flex-col  gap-1 lg:max-w-[45%]">
                 <LogoImage size={180} />
                 <h3 className="text-4xl font-bold text-primary-cyan">
-                    {prettify(stt.login)}
+                    {prettify(t("login"))}
                 </h3>
                 <span className="text-secondary-text">
-                    {stt.useLoginInfo}
+                    {t("useLoginInfo")}
                     <a
                         className="text-white font-medium"
                         href="mailto:contact@catchmflix.com"
@@ -31,7 +29,7 @@ export default function Login() {
             <div className="lg:w-[50%] w-full">
                 <form action="" className="flex flex-col gap-2">
                     <div className="text-sm text-secondary-text">
-                        {stt.fill}
+                        {t("fill")}
                     </div>
                     <div className="flex flex-col gap-1 ">
                         <span className="font-medium">email</span>
@@ -41,20 +39,7 @@ export default function Login() {
                         <span className="font-medium">password</span>
                         <Input type="password" placeholder="****" />
                     </div>
-                    <Button
-                        className="bg-primary-cyan text-black"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            toast(
-                                `Login/registrations for CatchMFlix users coming soon `,
-                                {
-                                    description: "Stay Tuned ✨",
-                                }
-                            );
-                        }}
-                    >
-                        Log In
-                    </Button>
+                    <LoginButton content="Login" />
                 </form>
             </div>
         </div>

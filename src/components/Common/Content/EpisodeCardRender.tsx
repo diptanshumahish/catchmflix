@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import NewLink from "../Navigation/NewLink";
 
 interface Props {
     ep: EpisodeCard;
@@ -19,8 +20,8 @@ export default function EpisodeCardRender({ ep }: Props) {
                     alt={ep.episodeTitle}
                     className="rounded-lg aspect-video w-auto h-[200px] object-cover shadow-sm"
                 />
-                <Link
-                    href={ep.episodeWatchLink}
+                <NewLink
+                    link={ep.episodeWatchLink}
                     className="absolute inset-0 opacity-60 bg-gradient-to-b from-transparent hover:opacity-100  to-design-black transition-opacity"
                 />
                 <div className="absolute bottom-2   left-2 text-xs flex items-center gap-2">
@@ -39,14 +40,20 @@ export default function EpisodeCardRender({ ep }: Props) {
                     />
                 )}
             </div>
-            <Link href={ep.episodeWatchLink}>
-                <h2 className="line-clamp-1 font-medium text-lg">
-                    {ep.episodeTitle}
-                </h2>
-                <span className=" text-secondary-text text-xs line-clamp-2">
-                    {ep.episodeDesc}
-                </span>
-            </Link>
+            <NewLink
+                link={ep.episodeWatchLink}
+                data={
+                    <>
+                        {" "}
+                        <h2 className="line-clamp-1 font-medium text-lg">
+                            {ep.episodeTitle}
+                        </h2>
+                        <span className=" text-secondary-text text-xs line-clamp-2">
+                            {ep.episodeDesc}
+                        </span>
+                    </>
+                }
+            />
         </div>
     );
 }

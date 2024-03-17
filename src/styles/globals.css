@@ -7,7 +7,6 @@
     display: none;
 }
 
-/* For Firefox and other browsers supporting standard scrollbar properties */
 html {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -21,7 +20,7 @@ body {
 .highlights {
     color: "#2ADCBC";
 }
-/* For most browsers */
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
