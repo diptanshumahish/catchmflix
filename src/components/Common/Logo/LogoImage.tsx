@@ -10,7 +10,7 @@ export default function LogoImage({ size = 40 }: Props) {
             src={static_images.logo}
             height={size}
             width={size}
-            alt="main logo for catchmflix"
+            alt="main logo for CatchMflixx"
         />
     );
 }

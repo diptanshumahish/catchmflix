@@ -27,6 +27,7 @@ export default function HomeWrapper() {
                     </span>{" "}
                     {t("landing_header3")}
                     <span className="font-semibold text-primary-cyan">
+                        {" "}
                         {t("landing_header4")}
                     </span>
                 </h2>

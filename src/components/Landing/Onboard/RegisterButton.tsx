@@ -13,7 +13,7 @@ export default function RegisterButton({ content }: Props) {
             className="bg-primary-cyan text-black"
             onClick={(e) => {
                 e.preventDefault();
-                toast(`registrations for CatchMFlix users coming soon `, {
+                toast(`registrations for CatchMflixx users coming soon `, {
                     description: "Stay Tuned ✅",
                 });
             }}

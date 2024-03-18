@@ -8,12 +8,12 @@ export const static_text = {
         noCatch:
             "No catch here, just register an account and start watching your favorite content right now, anywhere anytime Not satisfied? Let our support team know about your issues and we will sit and fix them together! We will make sure your experience here is better than any other OTT platform. That’s our word.",
         contentquality:
-            "At catchMFlix we believe that quality is better than getting a higher quantity of content. Our content may not be produced  by the best movie directors or the common people. But we provide you with the best of the best",
+            "At CatchMflixx we believe that quality is better than getting a higher quantity of content. Our content may not be produced  by the best movie directors or the common people. But we provide you with the best of the best",
         excited: "Excited ",
         already: "Already?",
         weToo: "we too are! to have you with us",
         join: "Join our early waitlist by entering your email below, we will get back to you ASAP.",
-        getReady: "Get ready for an amazing experience with CatchMflix",
+        getReady: "Get ready for an amazing experience with CatchMflixx",
         comingsoon: "Coming Soon",
         stayTuned: "Stay Tuned",
         pricing: "Pricing",
@@ -26,30 +26,30 @@ export const static_text = {
         aboutUsDetails:
             "Know more about us, who we are and we operate. Trust us then.",
         watchStuff: "Let’s Go & watch some stuff",
-        catchmflix: "CatchMFlix",
+        CatchMflixx: "CatchMflixx",
         onboard1:
-            "You need to login/signup before you can start watching movies/web series at CatchMFlix. If you already have an existing account then please login with your user credentials.",
+            "You need to login/signup before you can start watching movies/web series at CatchMflixx. If you already have an existing account then please login with your user credentials.",
         onboard2: "New here?",
         onboard3: " create a new account below",
         useLoginInfo:
             "use your login credentials to login back to your account. If any issues feel free to contact",
-        ad2: "All CatchMFlix subscribers can avail our premium plans free of cost! Don't wait, grab this amazing opportunity before it's gone. Enjoy amazing content, especially regional ones in your own language.",
+        ad2: "All CatchMflixx subscribers can avail our premium plans free of cost! Don't wait, grab this amazing opportunity before it's gone. Enjoy amazing content, especially regional ones in your own language.",
         aboutus1:
-            "CatchMFlix, a proud venture of CatchMFlix Pvt. Ltd., is more than just a streaming service – it's a celebration of regional creativity and storytelling. Our platform is dedicated to showcasing the remarkable work of local artists, bringing you a diverse collection of movies and web series that resonate with the essence of your community.",
+            "CatchMflixx, a proud venture of CatchMflixx Pvt. Ltd., is more than just a streaming service – it's a celebration of regional creativity and storytelling. Our platform is dedicated to showcasing the remarkable work of local artists, bringing you a diverse collection of movies and web series that resonate with the essence of your community.",
         local_talent:
-            "At CatchMFlix, we take pride in curating a selection that reflects the brilliance of regional artists. From gripping movies to captivating web series, each piece of content is a testament to the creativity and skill within our community.",
+            "At CatchMflixx, we take pride in curating a selection that reflects the brilliance of regional artists. From gripping movies to captivating web series, each piece of content is a testament to the creativity and skill within our community.",
         native_language:
-            "Immerse yourself in the authenticity of storytelling as we deliver every narrative in your native language. CatchMFlix is your gateway to a world where local stories take center stage, creating a unique viewing experience that resonates with your cultural roots.",
+            "Immerse yourself in the authenticity of storytelling as we deliver every narrative in your native language. CatchMflixx is your gateway to a world where local stories take center stage, creating a unique viewing experience that resonates with your cultural roots.",
         stream_anywhere: "📱 Stream Your Way, Anywhere, Anytime",
         stream_text:
-            "Enjoy the freedom of entertainment on your terms. Stream CatchMFlix seamlessly across various devices – be it your mobile phones, tablets, desktops, smart TVs, or other streaming gadgets. Your cinematic experience is at your fingertips, ready to enhance your moments, wherever you may be.",
+            "Enjoy the freedom of entertainment on your terms. Stream CatchMflixx seamlessly across various devices – be it your mobile phones, tablets, desktops, smart TVs, or other streaming gadgets. Your cinematic experience is at your fingertips, ready to enhance your moments, wherever you may be.",
         login: "login",
         register: "register",
         scroll: "scroll to know more",
         freewatch: "Free To Watch",
         catch: "There is no catch",
         ft1: "No hidden charges, No commitments",
-        ft2: `all CatchMflix users can get our premium plans for free
+        ft2: `all CatchMflixx users can get our premium plans for free
         right now!`,
         amazc: "Amazing Content",
         rather: "Rather the best content you can find!",
@@ -92,7 +92,7 @@ export const static_text = {
         aboutUsDetails:
             "మా గురించి, మేము ఎవరు మరియు మేము ఎలా పనిచేస్తాము అనే దాని గురించి మరింత తెలుసుకోండి. అప్పుడు మమ్మలను నమ్మండి",
         watchStuff: "వెళ్ళుదాం & కొన్ని ఆసక్తి ఉన్న వీడియోలు చూద్దాం",
-        catchmflix: " క్యాచ్Mఫ్లిక్స్",
+        CatchMflixx: " క్యాచ్Mఫ్లిక్స్",
         onboard1:
             "క్యాచ్ Mflixలో సినిమాలు/వెబ్ సిరీస్‌లను చూడటం ప్రారంభించడానికి ముందు మీరు లాగిన్/సైన్ అప్ అవసరం. మీకు ఇప్పటికే ఉన్న ఖాతా ఉంటే దయచేసి మీ వినియోగదారు ధృవీకరణలతో లాగిన్ అవ్వండి",
         onboard2: " మీరు మొదటి సారి వచ్చారా?",
@@ -156,7 +156,7 @@ export const static_text = {
         aboutUsDetails:
             "हमारे बारे में अधिक जानें, हम कौन हैं और हम कैसे काम करते हैं। फिर हम पर भरोसा करें।",
         watchStuff: "चलो चलें और कुछ सामान देखें",
-        catchmflix: "कैचएमफ्लिक्स",
+        CatchMflixx: "कैचएमफ्लिक्स",
         onboard1:
             "कैचएमफ्लिक्स पर फिल्म/वेब सीरीज देखना शुरू करने से पहले आपको लॉगिन/साइनअप करना होगा। यदि आपके पास पहले से ही कोई खाता है तो कृपया अपने उपयोगकर्ता क्रेडेंशियल्स के साथ लॉगिन करें।",
         onboard2: "यहाँ नए हैं?",

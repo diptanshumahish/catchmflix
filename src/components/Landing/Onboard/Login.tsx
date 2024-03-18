@@ -20,9 +20,9 @@ export default function Login() {
                     {t("useLoginInfo")}
                     <a
                         className="text-white font-medium"
-                        href="mailto:contact@catchmflix.com"
+                        href="mailto:contact@CatchMflixx.com"
                     >
-                        contact@catchmflix.com
+                        contact@CatchMflixx.com
                     </a>
                 </span>
             </div>

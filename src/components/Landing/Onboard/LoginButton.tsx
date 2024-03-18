@@ -12,9 +12,12 @@ export default function LoginButton({ content }: Props) {
             className="bg-primary-cyan text-black"
             onClick={(e) => {
                 e.preventDefault();
-                toast(`Login/registrations for CatchMFlix users coming soon `, {
-                    description: "Stay Tuned ✨",
-                });
+                toast(
+                    `Login/registrations for CatchMflixx users coming soon `,
+                    {
+                        description: "Stay Tuned ✨",
+                    }
+                );
             }}
         >
             {content}

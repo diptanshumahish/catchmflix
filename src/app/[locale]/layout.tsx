@@ -5,25 +5,25 @@ import { Toaster } from "@/components/ui/sonner";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
-    title: "CatchMFlix",
+    title: "CatchMflixx",
     description: "entertainment redefined",
     authors: [{ name: "Diptanshu Mahish" }],
     openGraph: {
-        title: "CatchMFlix",
+        title: "CatchMflixx",
         description: "entertainment redefined",
-        images: "https://catchmflix.in/catchmflix.png",
-        url: new URL("https://catchmflix.in"),
+        images: "https://CatchMflixx.com/catchmflix.png",
+        url: new URL("https://CatchMflixx.com"),
     },
-    metadataBase: new URL("https://catchmflix.in"),
+    metadataBase: new URL("https://CatchMflixx.com"),
     keywords: [
-        "CatchMflix",
-        "catchmflix",
+        "CatchMflixx",
+        "CatchMflixx",
         "catch m flix",
-        " Catchmflix",
-        "CATCHMFLIX",
+        " CatchMflixx",
+        "CatchMflixx",
     ],
     robots: "index,follow",
-    applicationName: "CatchMFlix",
+    applicationName: "CatchMflixx",
     category: "entertainment",
     creator: "Diptanshu Mahish, Pradyumna Ghoshal",
 };

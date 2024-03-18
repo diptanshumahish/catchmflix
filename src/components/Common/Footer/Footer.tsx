@@ -13,7 +13,7 @@ export default function Footer() {
                 <LogoImage size={80} />
                 <div>
                     <h3 className="text-2xl font-medium text-primary-cyan">
-                        CatchMFlix
+                        CatchMflixx
                     </h3>
                     <span className="text-secondary-text text-sm">
                         entertainment redefined
@@ -28,19 +28,19 @@ export default function Footer() {
                 <NewLink link="/privacy-policy" content={t("terms")} />
                 <Link href="tel:+919281122332">+91 9281122332</Link>
                 <span className="text-secondary-text">
-                    &copy; CatchMFlix 2024
+                    &copy; CatchMflixx 2024
                 </span>
             </div>
             <div className="text-white">
                 <span>{t("contact")}</span>
                 <div className="flex  gap-2 py-2">
-                    <Link href="https://www.instagram.com/catchmflix?igsh=anVydzUyODRwazg1">
+                    <Link href="https://www.instagram.com/CatchMflixx?igsh=anVydzUyODRwazg1">
                         <Instagram />
                     </Link>
                     {/* <Link href="/">
                         <Facebook />
                     </Link> */}
-                    <Link href="https://www.youtube.com/@CatchMFlix">
+                    <Link href="https://www.youtube.com/@CatchMflixx">
                         <Youtube />
                     </Link>
                     <Link href="tel:+919281122332">

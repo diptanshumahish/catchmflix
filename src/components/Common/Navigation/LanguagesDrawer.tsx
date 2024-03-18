@@ -114,6 +114,18 @@ export default function LanguagesDrawer() {
                                     </DrawerClose>
                                 </DrawerClose>
                             </DropdownMenuItem>
+                            <DropdownMenuItem className={commonstyle}>
+                                <DrawerClose>
+                                    <DrawerClose
+                                        onClick={() => {
+                                            setLang({ lang: "ml" });
+                                            onSelectChange("ml");
+                                        }}
+                                    >
+                                        Malayalam
+                                    </DrawerClose>
+                                </DrawerClose>
+                            </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
 

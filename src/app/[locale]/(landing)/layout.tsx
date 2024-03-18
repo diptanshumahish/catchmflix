@@ -12,7 +12,7 @@ export default function RootLayout({
     const t = useTranslations();
     return (
         <>
-            <InitialNavbar catchmflixText={t("catchmflix")} entRed="" />
+            <InitialNavbar CatchMflixxText={t("CatchMflixx")} entRed="" />
             {children}
 
             <Footer />

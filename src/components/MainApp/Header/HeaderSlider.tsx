@@ -91,7 +91,7 @@ export default function HeaderSlider() {
                 className="h-[70vh] w-screen relative overflow-hidden animate-in"
             >
                 <div className="top-[2%] w-fit bg-white bg-opacity-40 rounded-full border text-black border-black border-opacity-40 px-4 absolute flex items-center gap-2 z-10 text-sm font-medium lg:left-[8%] left-[5%]">
-                    <LogoImage size={15} /> CatchMflix Featured
+                    <LogoImage size={15} /> CatchMflixx Featured
                 </div>
                 <div className="right-[1%] w-fit z-10 gap-2 absolute h-[70vh] lg:flex hidden flex-col justify-center items-center">
                     {data.map((_, idx) => {

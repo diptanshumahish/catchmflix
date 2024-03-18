@@ -10,11 +10,11 @@ import Link from "next/link";
 import NewLink from "./NewLink";
 // import { Link } from "@/navigation";
 interface Props {
-    catchmflixText: string;
+    CatchMflixxText: string;
     entRed: string;
 }
 
-export default function InitialNavbar({ catchmflixText, entRed }: Props) {
+export default function InitialNavbar({ CatchMflixxText, entRed }: Props) {
     return (
         <nav className="fixed top-0 z-20  left-0 right-0 lg:px-[8%] px-[5%] pt-[2%]">
             <div className="flex justify-between border border-secondary-text p-3 lg:px-[3%] px-[5%] rounded-full border-opacity-40 backdrop-blur-sm">
@@ -23,11 +23,11 @@ export default function InitialNavbar({ catchmflixText, entRed }: Props) {
                         src={static_images.logo}
                         height={40}
                         width={40}
-                        alt="main logo for catchmflix"
+                        alt="main logo for CatchMflixx"
                         className="lg:size-10 size-8"
                     />
                     <div className="flex flex-col justify-center">
-                        <h1 className="font-medium">{catchmflixText}</h1>
+                        <h1 className="font-medium">{CatchMflixxText}</h1>
                         <span className="text-secondary-text text-sm lg:block hidden">
                             entertainment redefined
                         </span>

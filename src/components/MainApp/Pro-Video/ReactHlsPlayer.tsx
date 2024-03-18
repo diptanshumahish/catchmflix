@@ -161,6 +161,6 @@ const ReactHlsPlayer = forwardRef<ChildProps, HlsPlayerProps>(
         return <div>Error in authorization</div>;
     }
 );
-ReactHlsPlayer.displayName = "CATCHMFLIX_PLAYER";
+ReactHlsPlayer.displayName = "CatchMflixx_PLAYER";
 
 export default ReactHlsPlayer;

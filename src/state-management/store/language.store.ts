@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface LanguageState {
-    lang: "en" | "tg" | "hi" | "kn" | "ta";
+    lang: "en" | "tg" | "hi" | "kn" | "ta" | "ml";
 }
 
 const initialState: LanguageState = {

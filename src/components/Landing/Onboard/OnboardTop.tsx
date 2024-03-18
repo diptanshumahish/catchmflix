@@ -17,7 +17,7 @@ export default function OnboardTop() {
                     {t("watchStuff")}
                 </h2>
                 <span className="z-10 lg:text-5xl text-3xl font-bold text-primary-cyan">
-                    @{t("catchmflix")}
+                    @{t("CatchMflixx")}
                 </span>
                 <div className="text-secondary-text text-center z-10 lg:max-w-[40%] lg:px-0 px-[5%] py-6 text-sm">
                     <span>{t("onboard1")}</span>

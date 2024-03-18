@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-    title: "Watch Now 🎞️ | CatchMFlix",
+    title: "Watch Now 🎞️ | CatchMflixx",
 };
 
 export default function page() {
@@ -122,7 +122,7 @@ export default function page() {
             />
 
             <ContentSection
-                heading="CatchMFlix Picks"
+                heading="CatchMflixx Picks"
                 type="series"
                 subHeading="The best curated content, selected just for you, by our editorial"
                 seriesContent={[
@@ -295,7 +295,7 @@ export default function page() {
             />
             <div className="p-[5%] lg:px-[8%]">
                 <LogoImage size={90} />
-                <h2 className="text-xl text-white font-bold">CatchMFlix</h2>
+                <h2 className="text-xl text-white font-bold">CatchMflixx</h2>
             </div>
         </div>
     );
