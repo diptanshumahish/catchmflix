@@ -20,9 +20,9 @@ export default function Register() {
                     {t("useLoginInfo")}{" "}
                     <a
                         className="text-white font-medium"
-                        href="mailto:contact@CatchMflixx.com"
+                        href="mailto:contact@catchmflix.com"
                     >
-                        contact@CatchMflixx.com
+                        contact@catchmflix.com
                     </a>
                 </span>
             </div>

@@ -131,6 +131,7 @@ const ReactHlsPlayer = forwardRef<ChildProps, HlsPlayerProps>(
                 });
             }
         }, [hlsState]);
+
         if (Hls.isSupported())
             return (
                 <div>

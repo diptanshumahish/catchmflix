@@ -13,7 +13,7 @@ export default function Footer() {
                 <LogoImage size={80} />
                 <div>
                     <h3 className="text-2xl font-medium text-primary-cyan">
-                        CatchMflixx
+                        Catch M Flixx
                     </h3>
                     <span className="text-secondary-text text-sm">
                         entertainment redefined
